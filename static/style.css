@@ -1,11 +1,15 @@
 body {
     font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
     display: flex;
+    justify-content: space-between;
     font-size: x-large;
-    height: 50px;
+    height: auto;
     background-color: brown;
     color: #fff;
     border: 0px;
@@ -13,9 +17,10 @@ header {
 header > h1 {
     margin: 0;
 }
-/* header > img {
-    height: 20px;
-} */
+header > img {
+    height: auto;
+    width: auto;
+}
 
 nav {
     background-color: rgb(247, 144, 96);
@@ -25,4 +30,19 @@ nav {
 nav > ul {
     display: flex;
     gap: 3rem;
+}
+
+nav > ul > li {
+    list-style: none;
+}
+
+footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    height: auto;
+    background-color: brown;
+    color: #fff;
+    border: 0px;
 }
