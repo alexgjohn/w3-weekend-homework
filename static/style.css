@@ -3,8 +3,26 @@ body {
 }
 
 header {
+    display: flex;
+    font-size: x-large;
     height: 50px;
     background-color: brown;
     color: #fff;
-    
+    border: 0px;
+}
+header > h1 {
+    margin: 0;
+}
+/* header > img {
+    height: 20px;
+} */
+
+nav {
+    background-color: rgb(247, 144, 96);
+    display: flex;
+}
+
+nav > ul {
+    display: flex;
+    gap: 3rem;
 }

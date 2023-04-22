@@ -31,4 +31,12 @@ def remove(book_title):
     remove_book(book_title)
     return redirect('/our-books')
 
+@app.route('/about')
+def about():
+    return render_template('about.jinja', title="About Us")
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.jinja', title="Contact Us")
+
 
