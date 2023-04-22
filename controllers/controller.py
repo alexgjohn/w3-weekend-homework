@@ -1,7 +1,7 @@
 from flask import render_template, request, redirect, flash
 from app import app
 from models.book import Book
-from models.book_list import book_list, add_new_book, remove_book, get_book_by_title
+from models.book_list import book_list, add_new_book, remove_book, get_book_by_title, check_out
 
 @app.route('/our-books')
 def index():
@@ -31,6 +31,7 @@ def remove(book_title):
     remove_book(book_title)
     return redirect('/our-books')
 
+
 @app.route('/about')
 def about():
     return render_template('about.jinja', title="About Us")
@@ -38,5 +39,10 @@ def about():
 @app.route('/contact')
 def contact():
     return render_template('contact.jinja', title="Contact Us")
+
+# @app.route('/our-books/<path:book_title', methods = ['POST'])›
+# def check_out_book(book_title):
+#     check_out(book_title)
+#     return redirect ('/our-books/<path:book_title>')
 
 

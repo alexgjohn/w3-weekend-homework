@@ -14,14 +14,18 @@
 
 {% if book.checked_out %}
     <p><i> Checked Out! </i></p>
+    {# <h3>&#9989;</h3> #}
 {% endif %}
 
 <p>
     <form class="form-inline" action="/our-books/<path:book_title>/remove" method="POST">
         <input type="submit" value="Remove Book">
     </form>
+    <b> WARNING:</b> This will not actually delete the book from our list.
 </p>
 <p>
         <a href="/our-books"> Return to list</a>
 </p>
+
+
 {% endblock%}

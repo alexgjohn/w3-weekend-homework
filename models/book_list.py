@@ -1,4 +1,4 @@
-from models.book import Book
+from book import Book
 
 book_1 = Book("The Twits", "Roald Dahl", "Children's", True)
 book_2 = Book("Warrior Errant", "Harry Elliot", "Science Fiction", False)
@@ -26,4 +26,11 @@ def get_book_by_title(book_title):
     for book in book_list:
         if book.title == book_title:
             return book
+        
+def check_out(book_title):
+    for book in book_list:
+        if book.title == book_title:
+            book.checked_out = True
+
+
 
