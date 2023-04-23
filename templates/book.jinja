@@ -14,7 +14,11 @@
 
 {% if book.checked_out %}
     <span>
-        <i> Checked Out! </i>&#9989;
+        <i> Checked Out! </i>
+    </span>
+{% else %}
+    <span>
+        <i> Available to check out! </i>&#9989;
     </span>
 {% endif %}
 
