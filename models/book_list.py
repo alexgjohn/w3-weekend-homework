@@ -1,4 +1,4 @@
-from book import Book
+from models.book import Book
 
 book_1 = Book("The Twits", "Roald Dahl", "Children's", True)
 book_2 = Book("Warrior Errant", "Harry Elliot", "Science Fiction", False)
@@ -17,10 +17,13 @@ def add_new_book(new_book):
     book_list.append(new_book)
 
 def remove_book(book_title):
+    book_to_remove = None
     for book in book_list:
         if book.title == book_title:
-            book_list.remove(book)
+            book_to_remove = book
             break 
+    book_list.remove(book_to_remove)
+            
         
 def get_book_by_title(book_title):
     for book in book_list:

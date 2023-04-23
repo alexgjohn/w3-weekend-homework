@@ -13,16 +13,12 @@
     Genre: <b>{{ book.genre }}</b></p>
 
 {% if book.checked_out %}
-    <p><i> Checked Out! </i></p>
-    {# <h3>&#9989;</h3> #}
+    <span>
+        <i> Checked Out! </i>&#9989;
+    </span>
 {% endif %}
 
-<p>
-    <form class="form-inline" action="/our-books/<path:book_title>/remove" method="POST">
-        <input type="submit" value="Remove Book">
-    </form>
-    <b> WARNING:</b> This will not actually delete the book from our list.
-</p>
+
 <p>
         <a href="/our-books"> Return to list</a>
 </p>

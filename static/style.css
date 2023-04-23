@@ -3,6 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: rgb(250, 241, 229);
 }
 
 header {
@@ -45,4 +46,18 @@ footer {
     background-color: brown;
     color: #fff;
     border: 0px;
+}
+
+.titleInList {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    background-color: #643964d0;
+    padding: 10px;
+    margin:20px;
+    border-radius: 15px;
+}
+
+.titleInList > p > a {
+    color: white;
 }
